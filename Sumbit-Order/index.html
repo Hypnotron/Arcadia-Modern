@@ -1,0 +1,72 @@
+<DOCTYPE! html>
+<html>
+<head>
+  <title> Arcadia Modern & Co | Home </title>
+  <style>
+    #Banner {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .HomeButton{
+      font-family: Bebas Neue, Tahoma;
+      position: relative;
+      text-align: center;
+      display: inline;
+    }
+    .HomeRow{
+      width: 100%;
+      height: 35px;
+      background-color: #0F0303;
+    }
+    body {
+      background-color: #1A1A1A;
+    }
+    a {
+      text-decoration: none;
+      color: #882ACF;
+    }
+    a:hover {
+      color: #1E3D94
+    }
+    form {
+      color: white;
+      font-size: 12px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 140px;
+    }
+    input {
+      background-color: #0F0303;
+      color: white;
+      font-size: 12px;
+    }
+  </style>
+ 
+</head>
+<body>
+  <img id="Banner" src=http://i.cubeupload.com/PLftaH.png> </img>
+  <div class='HomeRow'>
+  <h1 style="left:37%"class="HomeButton"><a href=https://scratch.mit.edu/discuss/topic/272851/> Visit Shop </a></h1>
+  <h1 style="left:48%"class="HomeButton"><a href=https://hypnotron.github.io/Arcadia-Modern/Submit-Order>Order Now </a></h1>
+  </div>
+<br><br><br>
+  <form>
+  Username: <br>
+  <input type='text' name='Username'><br><br>
+  Item Request: <br>
+  <input type='text' name='ItemRequest'><br><br>
+  Description: <br>
+  <textarea style='width:140px; height: 30%;'name="Description"> </textarea><br><br>
+  Order Time: <br>
+  <input type='text' name='OrderTime'> <br> <br>
+  Additional Info: <br>
+  <input type='text' name='AdditionalInfo'> <br> <br>
+  <input style='width:140px;'type='submit' value='Order!'>
+  <?php 
+   $text= "Username: $Username <br> Item Request: $ItemRequest <br> Description: $Description <br> Order Time: $OrderTime <br> Additional Information: $AdditionalInfo <br><br><br>"
+   file_put_contents("data.txt", $text, FILE_APPEND)?>
+  </form>
+</body>
+</html>

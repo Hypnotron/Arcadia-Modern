@@ -52,7 +52,7 @@
   <h1 style="left:48%"class="HomeButton"><a href=https://hypnotron.github.io/Arcadia-Modern/Submit-Order>Order Now </a></h1>
   </div>
 <br><br><br>
-  <form>
+  <form action='SendMail.php'>
   Username: <br>
   <input type='text' name='Username'><br><br>
   Item Request: <br>
@@ -67,7 +67,7 @@
  
   </form>
    <?php 
-   $text= "Username: $Username <br> Item Request: $ItemRequest <br> Description: $Description <br> Order Time: $OrderTime <br> Additional Information: $AdditionalInfo <br><br><br>"
-   @mail ('emptyresearch@outlook.com', 'Arcadia Modern Order', $text)?>
+   $text= "Username: $Username <br> Item Request: $ItemRequest <br> Description: $Description <br> Order Time: $OrderTime <br> Additional Information: $AdditionalInfo <br><br><br>";
+   mail ('emptyresearch@outlook.com', 'Arcadia Modern Order', $text)?>
 </body>
 </html>
